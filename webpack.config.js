@@ -1,3 +1,4 @@
+// webpack.config.js
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -17,31 +18,34 @@ module.exports = (env, argv) => ({
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        use: 'babel-loader'
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,    // extrae CSS
-          'css-loader',                   // interpreta @import y url()
-          'sass-loader'                   // compila SCSS → CSS
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('@tailwindcss/postcss'),
+                  require('autoprefixer'),
+                ]
+              }
+            }
+          },
+          'sass-loader'
         ]
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),           // limpia dist/ antes de build
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     })
   ],
   devtool: argv.mode === 'development' ? 'source-map' : false,
-  watchOptions: {
-    ignored: /node_modules/
-  }
 });
