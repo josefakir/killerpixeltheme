@@ -1,3 +1,3 @@
-<?php 
-    echo "'Hello World! This is the index.php file of the Killer Pixel theme.'";
-?>
+<?php get_header(); ?>
+    <main></main>
+<?php get_footer(); ?>
