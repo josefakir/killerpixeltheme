@@ -1,0 +1,20 @@
+/* ─ Breakpoint valores fijos ─────────────────────────── */
+$bp-md:  768px;  // tablet
+$bp-lg:  992px;  // laptop
+$bp-xl: 1200px;  // desktop ancho
+
+/* ─ Min-width (mobile-first) ─────────────────────────── */
+/*  ≥ 768 */
+@mixin md-up  { @media (min-width: $bp-md) { @content; } }
+/*  ≥ 992 */
+@mixin lg-up  { @media (min-width: $bp-lg) { @content; } }
+/*  ≥ 1200 */
+@mixin xl-up  { @media (min-width: $bp-xl) { @content; } }
+
+/* ─ Max-width (hasta…) ───────────────────────────────── */
+/*  ≤ 767.98 */
+@mixin md-down { @media (max-width: ($bp-md - 0.02))  { @content; } }
+/*  ≤ 991.98 */
+@mixin lg-down { @media (max-width: ($bp-lg - 0.02))  { @content; } }
+/*  ≤ 1199.98 */
+@mixin xl-down { @media (max-width: ($bp-xl - 0.02))  { @content; } }

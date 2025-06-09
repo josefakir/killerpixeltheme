@@ -1,0 +1,182 @@
+@use "@/styles/index" as *;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-1);
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-left: var(--spacing-md);
+  }
+  &__hamburguer {
+    color: var(--color-text);
+    i {
+      font-size: var(--font-size-5xl);
+    }
+  }
+  &__logo {
+    img {
+      height: 60px;
+      width: auto;
+      margin: 5px;
+    }
+  }
+  &__menu {
+    .menu {
+      display: flex;
+      padding: 0;
+      list-style: none;
+      gap: var(--spacing-xl);
+      li {
+        &:has(> .submenu) > a::after {
+          content: "▿";
+          margin-left: var(--spacing-xs);
+        }
+        a {
+          color: var(--color-text);
+          text-decoration: none;
+          font-weight: var(--font-weight-medium);
+          text-transform: uppercase;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        .submenu {
+          display: none;
+          list-style: none;
+          padding: 0;
+          position: absolute;
+          background-color: var(--color-bg);
+          box-shadow: var(--shadow-2);
+          li {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            a {
+              color: var(--color-text);
+              &:hover {
+                color: var(--color-primary);
+              }
+            }
+          }
+        }
+        &:hover .submenu {
+          display: block;
+        }
+      }
+      @include md-down{
+        display: none;
+      }
+    }
+  }
+  &__icons {
+    margin-right: var(--spacing-md);
+    ul {
+      display: flex;
+      list-style: none;
+      gap: var(--spacing-md);
+      li {
+        a {
+          color: var(--color-text);
+          text-decoration: none;
+          font-size: var(--font-size-lg);
+          transition: color var(--dur-fast) var(--ease-base);
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+  &__categories {
+    flex: 0 0 100%;
+    background-color: var(--color-text);
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+      margin: var(--spacing-sm);
+      li {
+        &.separator {
+          width: 1px;
+          background-color: var(--color-muted);
+          margin: var(--spacing-xs) 0;
+        }
+        a {
+          text-decoration: none;
+          color: var(--color-bg);
+          font-weight: var(--font-weight-semibold);
+          font-size: var(--font-size-xs);
+        }
+      }
+    }
+  }
+  &__mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-text);
+    max-width: 100%;
+    justify-content: left;
+    padding: var(--spacing-lg);
+    &.open{
+      display: flex;
+    }
+    img {
+      height: 40px;
+      margin: var(--spacing-md) auto;
+    }
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding-inline-start: 0;
+      width: 100%;
+      li {
+        border-bottom: 1px solid var(--color-muted);
+        &:has(> .mobile-submenu) > a::after {
+          content: "▿";
+          margin-left: var(--spacing-xs);
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        a {
+          color: var(--color-bg);
+          text-decoration: none;
+          padding: var(--spacing-sm) 0;
+          display: block;
+          &.close{
+            i{
+              font-size: var(--font-size-5xl);
+              color: var(--color-bg);
+            }
+          }
+        }
+        ul.mobile-submenu {
+          padding: 0;
+          display: none;
+          li {
+            background-color: var(--color-bg);
+            padding: var(--spacing-xs) var(--spacing-md);
+            a {
+              color: var(--color-text);
+            }
+          }
+        }
+        &:hover ul.mobile-submenu {
+          display: block;
+        }
+      }
+    }
+  }
+}

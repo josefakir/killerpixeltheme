@@ -1,0 +1,90 @@
+/* src/styles/_themes.scss */
+:root{
+    --font-size-xxs: 0.5rem;
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-2xl: 1.5rem; /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem; /* 36px */
+    --font-size-5xl: 3rem; /* 48px */
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    --spacing-xxs: 0.125rem; /* 2px */
+    --spacing-xs: 0.25rem; /* 4px */
+    --spacing-sm: 0.5rem; /* 8px */
+    --spacing-md: 0.75rem; /* 12px */
+    --spacing-lg: 1rem; /* 16px */
+    --spacing-xl: 1.5rem; /* 24px */
+    --spacing-2xl: 2rem; /* 32px */
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    --header-height: 116px;
+    --footer-height: 60px;
+}
+/* ---------- Light -------------------------------------------------- */
+:root, [data-theme='light'] {
+  /* Neutrals */
+  --color-bg:            #ffffff;
+  --color-surface:       #f9fafb;
+  --color-border:        #ebebeb;
+  --color-text:          #141414;
+  --color-muted:         #6b7280;
+
+  /* Brand */
+  --color-primary:       #0066ff;
+  --color-primary-hover: #0052cc;
+  --color-secondary:     #f97316;
+
+  /* States */
+  --color-success:       #16a34a;
+  --color-warning:       #facc15;
+  --color-danger:        #dc2626;
+  --color-info:          #0ea5e9;
+
+  /* Depth */
+  --shadow-1: 0 1px 3px rgb(0 0 0 / 0.08);
+  --shadow-2: 0 4px 6px rgb(0 0 0 / 0.10);
+
+  /* Radius & Timing */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --ease-base: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:  120ms;
+  --dur-normal: 240ms;
+}
+
+/* ---------- Dark --------------------------------------------------- */
+[data-theme='dark'] {
+  --color-bg:            #0c1013;
+  --color-surface:       #1e293b;
+  --color-border:        #d8d8d8;
+  --color-text:          #f1f5f9;
+  --color-muted:         #94a3b8;
+
+  --color-primary:       #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-secondary:     #fb923c;
+
+  --color-success:       #22c55e;
+  --color-warning:       #eab308;
+  --color-danger:        #ef4444;
+  --color-info:          #38bdf8;
+
+  --shadow-1: 0 1px 3px rgb(0 0 0 / 0.25);
+  --shadow-2: 0 4px 6px rgb(0 0 0 / 0.35);
+}

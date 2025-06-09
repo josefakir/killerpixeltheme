@@ -1,34 +1,32 @@
 {
   "name": "killerpixeltheme",
   "version": "1.0.0",
-  "description": "Desarrollo de tema de wordpress multi propósito",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@githubpersonal.com:josefakir/killerpixeltheme.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "@babel/core": "^7.27.1",
+    "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
-    "@tailwindcss/postcss": "^4.1.7",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
-    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "glob": "^11.0.2",
+    "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
-    "postcss": "^8.5.3",
+    "modern-normalize": "^3.0.1",
+    "postcss": "^8.5.4",
     "postcss-loader": "^8.1.1",
-    "sass": "^1.89.0",
+    "sass": "^1.89.1",
     "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
-    "tailwindcss": "^4.1.7",
+    "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
