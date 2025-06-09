@@ -6,12 +6,15 @@
             the_post(); 
             the_post_thumbnail('full', ['class' => 'post-thumbnail']);
             ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <!--<h1 class="post-title"><?php the_title(); ?></h1>-->
-                <div class="post-content">
-                    <?php the_content(); ?>
-                </div>
-            </article>
+            <div class="container">
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <h1 class="post-title"><?php the_title(); ?></h1>
+                    <div class="post-content">
+                        <?php the_content(); ?>
+                    </div>
+                </article>
+            </div>
+            
             <?php
         }
     }

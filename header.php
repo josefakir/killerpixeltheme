@@ -38,9 +38,9 @@
     </nav>
     <div class="header__icons">
       <ul>
-        <li><a href=""><i class="material-icons">search</i></a></li>
+        <!--<li><a href=""><i class="material-icons">search</i></a></li>-->
         <li><a href="#" id="toggleTheme"><i class="material-icons">dark_mode</i></a></li>
-        <li><a href=""><i class="material-icons">account_circle</i></a></li>
+        <!--<li><a href=""><i class="material-icons">account_circle</i></a></li>-->
       </ul>
     </div>
     <!--<div class="header__categories">
