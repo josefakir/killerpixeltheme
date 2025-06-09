@@ -77,7 +77,13 @@ main{
 .radius-sm    { border-radius: var(--radius-sm); }
 .radius-md    { border-radius: var(--radius-md); }
 .radius-lg    { border-radius: var(--radius-lg); }
-.container    { max-width: 1320px; width: 100%; display: flex; margin: 0 auto;}
+.container    { max-width: 1320px; width: 100%; display: block; margin: var(--spacing-xl) auto; padding: var(--spacing-xl);}
 .text-align-right { text-align: right; }
-
+.w100         { width: 100% !important; }
+.parallax     {background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover; max-height: 400px; min-height: 400px;}
+.modulo       {padding: 40px 0;}
+.post-thumbnail {
+  width: 100%;
+  height: auto;
+}
 /* ---------- End global ------------------------------------------ */
